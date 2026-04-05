@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Contacts from "./pages/Contacts";
+import Chat from "./pages/Chat";
 
-function App() {
+export default function App() {
+  const [activePage, setActivePage] = useState("home");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-gray-100">
+      <Navbar setActivePage={setActivePage} />
+      <div className="p-6">
+        {activePage === "home" && <Home />}
+        {activePage === "contacts" && <Contacts />}
+        {activePage === "chat" && <Chat />}
+      </div>
     </div>
   );
 }
-
-export default App;
