@@ -1,4 +1,4 @@
 export const contacts = [
-  { dept: "Maintenance", phone: "9876543210" },
-  { dept: "Security", phone: "9123456780" },
+  { dept: "Maintenance", phone: "9000000000" },
+  { dept: "Security", phone: "9000000000" },
 ];
