@@ -1,5 +1,5 @@
 export const askQuestion = async (question) => {
-  const res = await fetch("http://127.0.0.1:8000/ask", {
+  const res = await fetch("https://grihalink-backend.onrender.com/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
